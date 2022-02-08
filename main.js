@@ -25,13 +25,13 @@ function winCheck() {
     document.getElementById("team1Score").classList.add("hidden")
     document.getElementById("team2Score").classList.add("hidden")
     document.getElementById("resetButton").classList.remove("hidden")
-    console.log("Team1Win");
+    gameOver1()
   }
   else if (scoreTwo >= 10) {
     document.getElementById("team1Score").classList.add("hidden")
     document.getElementById("team2Score").classList.add("hidden")
     document.getElementById("resetButton").classList.remove("hidden")
-    console.log("Team2Win");
+    gameOver2()
   }
 }
 
@@ -41,5 +41,14 @@ function resetForm() {
   document.getElementById("team1Score").classList.remove("hidden")
   document.getElementById("team2Score").classList.remove("hidden")
   document.getElementById("resetButton").classList.add("hidden")
+  document.getElementById("image").innerHTML = "<img class='img-fluid' src='https://getwallpapers.com/wallpaper/full/f/8/6/629819.jpg' alt='Naruto image'>"
   draw()
+}
+
+function gameOver1() {
+  document.getElementById("image").innerHTML = "<img class='img-fluid' src='https://wallpapercave.com/wp/wp3914161.jpg' alt='Naruto image'>"
+}
+
+function gameOver2() {
+  document.getElementById("image").innerHTML = "<img class='img-fluid' src='https://wallpapercave.com/wp/wp5955198.jpg' alt='Naruto image'>"
 }
